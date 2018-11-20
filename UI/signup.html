@@ -7,13 +7,13 @@
         <meta name="author" content="Raymond Akalonu">
         <link rel="stylesheet" href="assets/css/styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <title>iReporter| Home</title>
+        <title>iReporter| Signup</title>
     </head>
     
     <body>
         <nav class="row">
             <div class="logo-div">
-                <a href="index.html"><img src="assets/img/logo1.png"></a>
+               <a href="index.html"><img src="assets/img/logo1.png"></a>
             </div>
             <div class="signup-signin-div">
                 <h4>
@@ -28,46 +28,61 @@
         <section class="container">
             <div class="row text-center mt-0">
                 <div class="col-100 pt-0">
-                    <h1 class="heading">Welcome to <span class="logo">iReporter</span>, where the eye talks!</h1>
-                    <p class="subheading">Don't just rant about the corruptions, tell the people that matters</p>
-                    <button class="btn-main" href="signin.html" style="vertical-align:middle"><span><a href="signin.html" class="gs-link"> Get started</a> </span></button>
-                </div>
+                    <h1 class="heading">Fill out the form below to begin using <span class="logo">iReporter!</span></h1>
             </div>
         </section>
 
-        <footer class="footer-container">
-            <div class="abt-header">
-                <h2>How Do I Report?</h2>
-            </div>
+        <footer class="footer-container-form"> 
             <div class="footer-item-container">
                 <div style="flex-grow: 3">
-                    <div class="abt-body">
+                    <div class="abt-body-accounts">
                         <span class="fa-stack">
                             <span class="fa fa-circle-o fa-stack-2x"></span>
                             <strong class="fa-stack-1x">1</strong>
                         </span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue arcu vitae mi feugiat aliquam. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                        <p>Create an account</p>
                     </div>
                 </div>
                 <div style="flex-grow: 4">
-                    <div class="abt-body">
+                    <div class="abt-body-accounts">
                         <span class="fa-stack">
                             <span class="fa fa-circle-o fa-stack-2x"></span>
                             <strong class="fa-stack-1x">2</strong>
                         </span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue arcu vitae mi feugiat aliquam. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                        <p>Make a Report</p>
                     </div>
                 </div>
                 <div style="flex-grow: 3">
-                    <div class="abt-body">
+                    <div class="abt-body-accounts">
                         <span class="fa-stack">
                             <span class="fa fa-circle-o fa-stack-2x"></span>
                             <strong class="fa-stack-1x">3</strong>
                         </span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue arcu vitae mi feugiat aliquam. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                        <p>Submit</p>
                     </div>
                 </div>
-            </div>
+            </div><br>
+            <form class="container">             
+                <div class="form-container">
+                    <label for="fname"><b>First Name</b></label>
+                    <input type="text" placeholder="Enter First Name" name="fname" required>
+                
+                    <label for="lname"><b>Last Name</b></label>
+                    <input type="text" placeholder="Enter Last Name" name="lname" required>
+                
+                    <label for="email"><b>Email Address</b></label>
+                    <input type="email" placeholder="Enter Email Address" name="email" required>
+                
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                
+                    <label for="cpsw"><b>Confirm Password</b></label>
+                    <input type="password" placeholder="Confirm Password" name="psw" required>
+                        
+                    <a href="addnew.html" class="btn-form">Signup</a>
+                    <p class="text-center">Already have an account? login <a href="signin.html" class="link">here</a></p>
+                </div>
+            </form>
             <div class="footer-container-2">
                 <p>Copyright &copy; 2018, Raymond Akalonu.</p>
             </div>
