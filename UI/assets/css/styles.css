@@ -1,0 +1,192 @@
+html {
+    margin: 0;
+    height: 100%;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+body {
+    margin: 0;
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    color: white;
+    background: url("../img/bg4.png") no-repeat center center;
+    background-color: white;
+    background-size: cover;
+    background-attachment: fixed;
+    justify-content: space-between;
+} 
+.btn-about {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 16px;
+    cursor: pointer;
+    opacity: 1;
+} 
+
+.row{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+nav .logo-div{
+	flex: 30%;
+	max-width: 30%;
+    font-family: 'Aldrich';
+    font-size: 22px;
+    color:#ffffff;
+    text-align:center;
+}
+nav .signup-signin-div{
+	flex: 70%;
+	max-width: 70%;
+    font-family: 'Aldrich';
+    color:#ffffff;    
+    text-align:right;    
+}
+nav .signup-signin-div h4{
+    margin-right:3rem;        
+}
+nav a {
+    color: inherit; 
+    text-decoration:none;
+} 
+.m-side {
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+.logo {
+    color: #007bff;
+    font-weight: bold;
+}
+.heading {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    text-shadow: 3px 3px 3px #000;
+}
+.subheading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-shadow: 3px 3px 3px #000;
+}
+.btn-main {
+    display: inline-block;
+    background-color: #007bff;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 30%;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+.btn-main span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.btn-main span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+.btn-main:hover span {
+    padding-right: 25px;
+}
+  
+.btn-main:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+.footer-container {
+    background-color: #007bff;
+}
+.footer-item-container {
+    display: flex;
+    align-items: stretch;
+}
+.abt-header {
+    text-align: center;
+    padding: 10px;
+    border-bottom-color: 1px solid #f4511e;
+}
+.abt-body {
+    text-align: center;
+    padding: 10px;
+}
+.footer-container-2 {
+    display: flex;
+    height: 70px;
+    color: #FFFFFF;
+    background: linear-gradient(rgba(0, 0, 0, 0.205), rgba(0, 0, 0, 0.9));
+    padding: 0 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+/* positions styling */
+/* .row {  
+    display: flex;
+    flex-wrap: wrap;
+} */
+.col-100 {
+    flex: 100%;
+}
+.col-75 {
+    flex: 75%;
+}
+.col-70 {
+    flex: 70%;
+}
+.col-60 {
+    flex: 60%;
+}
+.col-50 {
+    flex: 50%;
+}
+.col-40 {
+    flex: 40%;
+}
+.col-30 {
+    flex: 30%;
+}
+.col-25 {
+    flex: 25%;
+}
+.left {
+    justify-content: flex-start;
+}
+.right {
+    justify-content: flex-end;
+}
+.center {
+    justify-content: center;
+}
