@@ -7,7 +7,7 @@
         <meta name="author" content="Raymond Akalonu">
         <link rel="stylesheet" href="assets/css/account.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <title>iReporter| Dashboard</title>
+        <title>iReporter| Report Red-Flag</title>
     </head>
     
     <body>
@@ -19,12 +19,12 @@
                 <h5>Logout</h5>
             </div>
 
-            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="dashboard.html">Dashboard</a>
             <button class="dropdown-btn bordeless">Report
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-container bordeless">
-                <a href="#">Red-Flag</a>
+                <a href="#" class="active">Red-Flag</a>
                 <a href="#">Intervention</a>
             </div>
             <button class="dropdown-btn bordeless">Report-Records 
@@ -47,39 +47,19 @@
                 </div>
             </div>
             
-            <div class="wrap">
-                <div class="card success">
-                    <h2>31</h2>
-                    <h3>Total Interventions</h3>
-                </div>
-                <div class="card danger">
-                    <h2>80</h2>
-                    <h3>Total Red-Flags</h3>
-                </div>
+            <div class="container bg-white">
+                <form class="form-container">             
+                    <input type="text" class="title" placeholder="Title Here"autofocus required>
+                
+                    <p>Tell us what happened below. Don't limit yourself...</p>
+                    <textarea class="content" rows="10" cols="50" placeholder="Entry Here"></textarea><br><br>
+                        
+                    <label class="file"> Enter A File
+                        <input type="file" id="File" size="60" >
+                    </label> 
+                    <button class="submit" type="submit" value="Submit">Submit</button>
+                </form>
             </div>
-            <!-- Table -->
-            <table id="report">
-                <tr>
-                    <th class="main">Details</th>
-                    <th>Red-Flag</th>
-                    <th>Intervention</th>
-                </tr>
-                <tr>
-                    <td class="main success">Resolved</td>
-                    <td>52</td>
-                    <td>17</td>
-                </tr>
-                <tr>
-                    <td class="main warning">Pending</td>
-                    <td>22</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td class="main danger">Rejected</td>
-                    <td>6</td>
-                    <td>4</td>
-                </tr>    
-            </table>
             <footer>
                 <p>Copyright &copy; 2018, Raymond Akalonu.</p>
             </footer>
