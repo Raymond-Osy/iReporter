@@ -232,6 +232,30 @@ input[type=text], select {
 input[type="file"] {
     display: none;
 }
+
+/* Styles for records */
+.records-column {  
+    display: flex;
+    flex-direction: column;
+}
+.col-100 {
+    flex: 100%
+}
+.entry-item {
+    margin: 10px;
+    background-color: #fdf9f9c7;
+    padding: 10px;
+    font-size: 15px;
+}
+.entry-item h3, a, p {
+    color: #111;
+    text-decoration: none;
+}
+.right {
+    text-align: right;
+}
+
+
 footer {
     display: flex;
     height: 70px;
