@@ -22,7 +22,7 @@ body {
     font-size: 20px;
     color: #818181;
     display: block;
-    border: none;
+    /* border: none; */
     background: none;
     width: 100%;
     text-align: left;
@@ -33,13 +33,10 @@ body {
 .sidenav a:hover, .dropdown-btn:hover {
     color: #f1f1f1;
 }
-/* .logout {
-    padding: 0;
-    display: inline;
+.bordeless {
+    border: none;
 }
-.logout:hover {
-    color: #818181;
-} */
+
 /* Main content */
 .main {
     margin-left: 250px; /* Same as the width of the sidenav */
@@ -53,13 +50,17 @@ body {
 .active {
     border-left: 3px solid #007bff;;
     color: white;
+    background-color: #050505;
 }
-
 /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
 .dropdown-container {
     display: none;
     background-color: #262626;
     padding-left: 8px;
+}
+.activate {
+    border-left: 3px solid #007bff;;
+    color: white;
 }
 
 /* Optional: Style the caret down icon */
@@ -84,9 +85,7 @@ body {
     text-align: center;
     padding-top: 25px;
 }
-.red {
-    background-color: #f4511e;
-}
+
 .img-size {
     height: 25px;
 }
