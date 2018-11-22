@@ -139,13 +139,23 @@ body {
 .danger {
     color: #d50000;
 }
-
+.bg-danger {
+    background-color: #d50000;
+}
 .warning {
     color: #ffa100;
 }
-
+.bg-warning {
+    background-color: #ffa100;
+}
 .success {
     color: #4CAF50;
+}
+.bg-success {
+    background-color: #4CAF50;
+}
+.bg-cool {
+    background-color: #007bff;
 }
 .bg-white {
     background-color: #fff;
@@ -178,6 +188,11 @@ body {
     border-bottom: 1px solid #ccc;
     margin:0px;
     font-size: 15px
+}
+.form-container h1 {
+    margin-bottom: 5px;
+    font-size:40px;
+    font-family: 'Abel'; 
 }
 input[type=text], select {
     width: 100%;
@@ -254,8 +269,42 @@ input[type="file"] {
 .right {
     text-align: right;
 }
-
-
+.btn {
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    opacity: 0.6;
+    transition: 0.3s;
+    font-size: 16px;
+    margin: 10px 0px;
+    cursor: pointer;
+}
+.btn:hover {
+    opacity: 1;
+}
+.row-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+.title {
+    display: flex;
+    justify-content: flex-start; 
+}
+.title h1{
+    border-bottom: 2px solid #007bff;
+    padding: 5px;
+}
+.updates {
+    width: 95%;
+}
+.card-item {
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 footer {
     display: flex;
     height: 70px;
