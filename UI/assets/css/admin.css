@@ -17,7 +17,12 @@ body {
     background-attachment: fixed;
     justify-content: space-between;
 } 
-
+.container {
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 30px;
+}
 .top-nav ul {
     list-style-type: none;
     margin: 0;
@@ -65,4 +70,40 @@ li.dropdown {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+.active {
+    background-color: #007bff;
+}
+
+/* Table for users */
+#users {
+    border-collapse: collapse;
+    width: 100%;
+    color: #212529;
+}
+
+#users td, #users th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#users tr:nth-child(even){background-color: #f2f2f2;}
+
+#users tr:hover {
+	background-color: #ddd;
+    cursor: pointer;
+}
+.center {
+    text-align: center;
+}
+#users th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #007bff;
+    color: white;
+    font-size: 20px;
+}
+footer {
+    border-top: 1px solid #212529
 }
