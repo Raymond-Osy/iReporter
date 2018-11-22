@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="author" content="Raymond Akalonu">
+        <link rel="stylesheet" href="assets/css/account.css">
+        <link rel="stylesheet" href="assets/css/admin.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <title>iReporter| Admin-Dashboard</title>
+    </head>
+    
+    <body>
+        <nav class="top-nav">
+            <ul>
+                <li><a href="index.html">iReporter</a></li>
+                <li style="float:right" class="dropdown">
+                    <a href="javascript:void(0)">Raymond<span><i class="fas fa-sort-down"></i></span></a>
+                    <div class="dropdown-content">
+                        <a href="#"><i class="fas fa-cog"></i> &nbsp; Account Settings </a>
+                        <a href="#"><i class="fas fa-hands-helping"></i> &nbsp; Help & FAQs</a>                                
+                        <a href="#"><i class="fas fa-sign-out-alt"></i> &nbsp; Logout</a>
+                    </div>
+                </li>
+                <li style="float:right"><a href="#">Updates</a></li>   
+                <li style="float:right" class="active"><a href="#">Dashboard</a></li>                
+            </ul> 
+        </nav>
+
+        <div class="container bg-white">
+            <div class="row stretch">
+                <div class="card" style="flex-grow: 1">
+                   <h3>Users Quick details</h3><hr>
+                   <div class="left">
+                        <p><strong>Name:</strong> rayzofdiamond</p><hr>
+                        <p><strong>First-Name:</strong> Raymond</p><hr>
+                        <p><strong>Last-Name:</strong> Akalonu</p><hr>
+                        <p><strong>Other Name:</strong> Osynachi</p><hr>
+                        <p><strong>E-mail:</strong> raymondosy1@gmail.com</p><hr>
+                        <p><strong>Phone-Number:</strong> +2349024898902</p>
+                    </div>  
+                </div>
+                <div style="flex-grow: 8"></div>
+                <div class="card left" style="flex-grow: 1">
+                    <h3>Options</h3><hr>
+                    <form style="width: 250px">
+                        <p class="success"><input type="radio" name="status" value="Resolved" checked> Resolved</p><br>
+                        <p class="warning"><input type="radio" value="Investigation">Investigation</p><br>
+                        <p class="danger"><input type="radio" value="Rejected">Rejected</p>
+                    </form> 
+                </div>
+            </div>   
+
+            <div class="form-container">
+                <h1>Power outage for almost a year now.</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu facilisis mauris, id dignissim ipsum. Integer venenatis metus nec massa sollicitudin, et ultricies orci suscipit. Vivamus fermentum nibh id hendrerit iaculis.<br> Morbi eu facilisis mauris, id dignissim ipsum. Integer venenatis metus nec massa sollicitudin, et ultricies orci suscipit. Vivamus fermentum nibh id hendrerit iaculis.Morbi eu facilisis mauris, id dignissim ipsum. Integer venenatis metus nec massa sollicitudin, et ultricies orci suscipit. Vivamus fermentum nibh id hendrerit iaculis.Morbi eu facilisis mauris, id dignissim ipsum. Integer venenatis metus nec massa sollicitudin, et ultricies orci suscipit. Vivamus fermentum nibh id hendrerit iaculis.Morbi eu facilisis mauris, id dignissim ipsum. Integer venenatis metus nec massa sollicitudin, et ultricies orci suscipit. Vivamus fermentum nibh id hendrerit iaculis.
+                    <br> Morbi eu facilisis mauris, id dignissim ipsum. Integer venenatis metus nec massa sollicitudin, et ultricies orci suscipit. Vivamus fermentum nibh id hendrerit iaculis.Morbi eu facilisis mauris, id dignissim ipsum. Integer venenatis metus nec massa sollicitudin, et ultricies orci suscipit. Vivamus fermentum nibh id hendrerit iaculis.Morbi eu facilisis mauris, id dignissim ipsum. Integer venenatis metus nec massa sollicitudin, et ultricies orci suscipit. Vivamus fermentum nibh id hendrerit iaculis.Morbi eu facilisis mauris, id dignissim ipsum. Integer venenatis metus nec massa sollicitudin, et ultricies orci suscipit. Vivamus fermentum nibh id hendrerit iaculis.<br> Morbi eu facilisis mauris, id dignissim ipsum. Integer venenatis metus nec massa sollicitudin, et ultricies orci suscipit. Vivamus fermentum nibh id hendrerit iaculis.Morbi eu facilisis mauris, id dignissim ipsum. Integer venenatis metus nec massa sollicitudin, et ultricies orci suscipit. Vivamus fermentum nibh id hendrerit iaculis.Morbi eu facilisis mauris, id dignissim ipsum. Integer venenatis metus nec massa sollicitudin, et ultricies orci suscipit. Vivamus fermentum nibh id hendrerit iaculis.Morbi eu facilisis mauris, id dignissim ipsum. Integer venenatis metus nec massa sollicitudin, et ultricies orci suscipit. Vivamus fermentum nibh id hendrerit iaculis.</p>
+                <div class="row">
+                    <div style="flex-grow: 5">
+                        <button class="btn bg-success" onclick="alert('This post shall be uploaded shortly.')">Upload</button>
+                    </div>
+                    <div class="right" style="flex-grow: 5">
+                        <button class="btn bg-danger" onclick="alert('Are you sure you want to delete this users post?')">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>Copyright &copy; 2018, Raymond Akalonu.</p>
+        </footer>
+        <script src="assets/js/index.js"></script>
+    </body>
+</html>

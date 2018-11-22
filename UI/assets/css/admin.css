@@ -73,8 +73,25 @@ li.dropdown {
 }
 .active {
     background-color: #007bff;
+    border-right: 1px solid #fff;
 }
-
+.card {
+    padding: 2px 20px;
+    font-size: 15px;
+}
+.card h3 {
+    color: #212529;
+}
+.left {
+    text-align: left;
+}
+.stretch {
+    display: flex;
+    align-items: stretch;
+}
+form, p {
+    font-optical-sizing: 50px
+}
 /* Table for users */
 #users {
     border-collapse: collapse;
