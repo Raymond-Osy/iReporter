@@ -7,10 +7,11 @@ html {
 }
 body {
     margin: 0;
+    color: #212529;
     display: flex;
     min-height: 100%;
     flex-direction: column;
-    color: white;
+    color: #212529;
     background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../img/newsroom.jpg") no-repeat center center;
     background-color: white; 
     background-size: cover;
@@ -18,7 +19,7 @@ body {
     justify-content: space-between;
 } 
 .container {
-    width: 70%;
+    width: 95%;
     margin: auto;
     overflow: hidden;
     margin-top: 30px;
@@ -76,8 +77,9 @@ li.dropdown {
     border-right: 1px solid #fff;
 }
 .card {
-    padding: 2px 20px;
+    padding: 2px 5px;
     font-size: 15px;
+    width: 200px;
 }
 .card h3 {
     color: #212529;
@@ -121,6 +123,15 @@ form, p {
     color: white;
     font-size: 20px;
 }
+.addBtn {
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
+.btn {
+    opacity: 1;
+}
+
 footer {
     border-top: 1px solid #212529
 }
