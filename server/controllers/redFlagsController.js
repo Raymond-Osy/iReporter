@@ -18,6 +18,22 @@ class RedFlagsController {
     }
     return res.json({ message: 'Red-Flags list loaded successfully', redFlags });
   }
+
+  /**
+    * @static
+    * @param {object} req - The request payload sent to the router
+    * @param {object} res - The response payload sent back from the controller
+    * @returns {object} - status Message and the particular redFlag by id.
+    * @memberOf redFlagsController
+    */
+  static getARedFlagById(req, res) {
+    const id = req.params.redFlagId;
+    const redFlag = redFlags.find(redFlagItem => +redFlagItem.redFlagId === +id);
+    if (!redFlag) {
+      return res.status(404).json({ message: `Red-flag with the given Id ${id} does not exist` });
+    }
+    return res.json({ message: 'Red-flags search was successful', redFlag });
+  }
 }
 
 export default RedFlagsController;
