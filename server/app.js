@@ -1,20 +1,20 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import logger from 'morgan';
+import router from './routes/routes';
 
 
 const app = express();
 const http = require('http');
 
+app.use(logger('dev'));
 
 app.use(bodyParser.json());
-app.use(logger('dev'));
 app.use(bodyParser.urlencoded({
   extended: true,
 }));
 app.use('/api/v1', router);
 
-// returns 404 for unknown routes
 app.all('*', (req, res) => {
   res.status(404).send('Hello world!');
 });
