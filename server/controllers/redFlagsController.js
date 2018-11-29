@@ -9,7 +9,7 @@ class RedFlagsController {
   * @static
   * @param {object} req - The request payload recieved from the router
   * @param {object} res - The response payload sent back from the controller
-  * @returns {object} - status Message and list of all redFlags*
+  * @returns {object} - status Message and list of all redFlags
   * @memberOf redFlagsController
   */
   static getAllRedFlags(req, res) {
