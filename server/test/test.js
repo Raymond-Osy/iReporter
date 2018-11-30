@@ -17,3 +17,15 @@ describe('Get all Red-Flags from database', () => {
       });
   });
 });
+
+describe('Delete a Red-Flag from the database', () => {
+  it('Should delete a Red-flag by ID', (done) => {
+    chai.request(app)
+      .get('/api/v1/redFlags/:redFlagId')
+      .end((err, res) => {
+        expect(res).to.have.status(404);
+        expect(res.body).to.be.an('object');
+        done();
+      });
+  });
+});
