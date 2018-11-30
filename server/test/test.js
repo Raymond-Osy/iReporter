@@ -53,3 +53,47 @@ describe('Delete a Red-Flag from the database', () => {
       });
   });
 });
+
+describe('Get a non existing url/page', () => {
+  it('Should return a 404 for unknown routes', (done) => {
+    chai.request(app)
+      .get('/invalid/route')
+      .end((err, res) => {
+        expect(res).to.have.status(404);
+        done();
+      });
+  });
+});
+
+describe('Get a specified Red-Flag from the database', () => {
+  it('Should get one specific Red-Flag by ID', (done) => {
+    chai.request(app)
+      .get('/api/v1/redFlags/1')
+      .end((err, res) => {
+        expect(res).to.have.status(200);
+        expect(res.body).to.be.an('object');
+        done();
+      });
+  });
+});
+
+describe('Create a New Red-Flag', () => {
+  const redFlag = {
+    redFlagId: 1,
+    redFlagTitle: 'This is title one',
+    date: 'today',
+    type: 'Red-Flag',
+    userId: 1,
+    location: 'location one goes here',
+    img: 'here is image one',
+    comment: 'This is for comment one'
+  };
+  it('Should add a new Red-Flag to the database', (done) => {
+    chai.request(app)
+      .post('/api/v1/redFlags').send(redFlag)
+      .end((err, res) => {
+        expect(res).to.have.status(201);
+        done();
+      });
+  });
+});
