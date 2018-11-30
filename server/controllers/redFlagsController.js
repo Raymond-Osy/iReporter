@@ -61,8 +61,8 @@ class RedFlagsController {
     redFlags.push(redFlag);
     return res.status(201).send({ message: 'New redFlag successfully added', redFlag });
   }
-    
-   /**
+
+  /**
     * @static
     * @param {object} req - The request payload sent to the router
     * @param {object} res - The response payload sent back from the controller
@@ -74,9 +74,8 @@ class RedFlagsController {
     const redFlag = redFlags.find(redFlagItem => +redFlagItem.redFlagId === +id);
     Object.assign(redFlag, req.body);
     return res.json({ message: 'Red-Flag updated successfully', redFlag });
-
   }
-  
+
   /**
    * @static
    * @param {object} req - The request payload sent to the router
@@ -94,6 +93,6 @@ class RedFlagsController {
     redFlags.splice(index, 1);
 
     return res.status(200).json({ message: 'Red-flags deletion was successful', redFlag });
+  }
 }
-
 export default RedFlagsController;
