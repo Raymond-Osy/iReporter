@@ -1,7 +1,6 @@
 # iReporter
 
 [![Build Status](https://travis-ci.org/Raymond-Osy/iReporter.svg?branch=ch-travisBuild-%23162341903)](https://travis-ci.org/Raymond-Osy/iReporter)
-
 [![Coverage Status](https://coveralls.io/repos/github/Raymond-Osy/iReporter/badge.svg?branch=develop)](https://coveralls.io/github/Raymond-Osy/iReporter?branch=develop)
 
 iReporter enables any/every citizen to bring any form of corruption to the notice of appropriate authorities and the general public. Users can also report on things that needs government intervention.
