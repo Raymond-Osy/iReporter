@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "babel server -d dist/server",
+    "start": "nodemon --exec babel-node server/app.js",
     "start:dev": "nodemon --exec babel-node server/app.js",
     "test": "mocha server/test/*.js --exit  --require babel-register --reporter spec",
     "coveralls": "nyc --reporter=lcov --reporter=text-lcov npm test",
