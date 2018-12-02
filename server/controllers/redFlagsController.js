@@ -112,5 +112,23 @@ class RedFlagsController {
     redFlag.location = req.body.location;
     res.status(200).send({ data: [{ id: redFlagId, message: ' Red-Flag Location updated successfully', redFlag }] });
   }
+
+  /**
+    * @static
+    * @param {object} req - The request payload sent to the router
+    * @param {object} res - The response payload sent back from the controller
+    * @returns {object} - status Message and the particular updated entry created.
+    * @memberOf BusinessController
+    */
+  static updateRedFlagComment(req, res) {
+    // eslint-disable-next-line radix
+    const redFlag = redFlags.find(r => r.redFlagId === parseInt(req.params.redFlagId));
+    if (!redFlag) {
+      return res.status(404).json({ message: 'Red-flag with the given comment was not found' });
+    }
+    const redFlagId = redFlags.redFlagid;
+    redFlag.comment = req.body.comment;
+    res.status(200).send({ data: [{ id: redFlagId, message: ' Red-Flag comment updated successfully', redFlag }] });
+  }
 }
 export default RedFlagsController;

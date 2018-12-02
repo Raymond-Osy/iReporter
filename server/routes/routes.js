@@ -7,7 +7,8 @@ const {
   createRedFlag,
   updateRedFlag,
   deleteRedFlag,
-  updateRedFlagLocation
+  updateRedFlagLocation,
+  updateRedFlagComment
 } = RedFlagsController;
 
 const router = express.Router();
@@ -17,5 +18,6 @@ router.post('/redFlags', createRedFlag);
 router.put('/redFlags/:redFlagId', updateRedFlag);
 router.delete('/redFlags/:redFlagId', deleteRedFlag);
 router.patch('/redFlags/:redFlagId/location', updateRedFlagLocation);
+router.patch('/redFlags/:redFlagId/comment', updateRedFlagComment);
 
 export default router;
