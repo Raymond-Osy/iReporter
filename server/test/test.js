@@ -45,7 +45,7 @@ describe('Modify a Red-Flag', () => {
 describe('Delete a Red-Flag from the database', () => {
   it('Should delete a Red-flag by ID', (done) => {
     chai.request(app)
-      .get('/api/v1/redFlags/:redFlagId')
+      .delete('/api/v1/redFlags/:redFlagId')
       .end((err, res) => {
         expect(res).to.have.status(404);
         expect(res.body).to.be.an('object');
@@ -93,6 +93,30 @@ describe('Create a New Red-Flag', () => {
       .post('/api/v1/redFlags').send(redFlag)
       .end((err, res) => {
         expect(res).to.have.status(201);
+        done();
+      });
+  });
+});
+
+describe('Update a location in a specified Red-flag', () => {
+  it('Should update one specific Red-Flag by Location', (done) => {
+    chai.request(app)
+      .patch('/api/v1/redFlags/1/location')
+      .end((err, res) => {
+        expect(res).to.have.status(200);
+        expect(res.body).to.be.an('object');
+        done();
+      });
+  });
+});
+
+describe('Update a comment in a specified Red-flag', () => {
+  it('Should update one specific Red-Flag by comment', (done) => {
+    chai.request(app)
+      .patch('/api/v1/redFlags/1/comment')
+      .end((err, res) => {
+        expect(res).to.have.status(200);
+        expect(res.body).to.be.an('object');
         done();
       });
   });
