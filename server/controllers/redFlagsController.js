@@ -94,5 +94,23 @@ class RedFlagsController {
 
     return res.status(200).json({ message: 'Red-flags deletion was successful', redFlag });
   }
+
+  /**
+    * @static
+    * @param {object} req - The request payload sent to the router
+    * @param {object} res - The response payload sent back from the controller
+    * @returns {object} - status Message and the particular updated entry created.
+    * @memberOf redFlagsController
+    */
+  static updateRedFlagLocation(req, res) {
+    // eslint-disable-next-line radix
+    const redFlag = redFlags.find(r => r.redFlagId === parseInt(req.params.redFlagId));
+    if (!redFlag) {
+      return res.status(404).json({ message: 'Red-flag with the given location does not exist' });
+    }
+    const redFlagId = redFlags.redFlagid;
+    redFlag.location = req.body.location;
+    res.status(200).send({ data: [{ id: redFlagId, message: ' Red-Flag Location updated successfully', redFlag }] });
+  }
 }
 export default RedFlagsController;
