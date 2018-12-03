@@ -1,0 +1,321 @@
+/* Fixed sidenav, full height */
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,600,600i");
+body {
+    font-family: "Nunito", sans-serif;
+    background-color: #EBEFF2;
+}
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    /* border: none; */
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+    color: #f1f1f1;
+}
+.bordeless {
+    border: none;
+}
+
+/* Main content */
+.main {
+    margin-left: 250px; /* Same as the width of the sidenav */
+    font-size: 20px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+.row {
+    display: flex;
+}
+/* Add an active class to the active dropdown button */
+.active {
+    border-left: 3px solid #007bff;;
+    color: white;
+    background-color: #050505;
+}
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+    display: none;
+    background-color: #262626;
+    padding-left: 8px;
+}
+.activate {
+    border-left: 3px solid #007bff;;
+    color: white;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+    float: right;
+    padding-right: 8px;
+}
+.img-center {
+    text-align: center;
+}
+.img-center h3, h5 {
+    color: #ffffff;
+    font-family: "Nunito", sans-serif;
+}
+.col-90 {
+    flex: 90%;
+}
+.col-10 {
+    flex: 10%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.img-size {
+    height: 25px;
+}
+.wrap {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.end {
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+}
+.card {
+    background-color: #ffffff;
+    padding: 5px;
+    margin: 15px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+/* Table for dashboard */
+#report {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#report td, #report th {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+#report tr:nth-child(even){background-color: #f2f2f2;}
+
+#report th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+
+}
+#report .main {
+    text-align: left;
+    width: 60%;
+}
+.danger {
+    color: #d50000;
+}
+.bg-danger {
+    background-color: #d50000;
+}
+.warning {
+    color: #ffa100;
+}
+.bg-warning {
+    background-color: #ffa100;
+}
+.success {
+    color: #4CAF50;
+}
+.bg-success {
+    background-color: #4CAF50;
+}
+.cool {
+    color: #007bff;
+}
+.bg-cool {
+    background-color: #007bff;
+}
+.bg-white {
+    background-color: #fff;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 5px;
+    padding-bottom: 50px;
+    padding-left: 35px;
+    padding-right: 35px;
+    border-radius: 5px;
+    color: black;
+    font-family: 'Nunito', sans-serif; 
+}
+.form-container p {
+    color: #505050;
+    padding: 5px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin:0px;
+    font-size: 15px
+}
+.form-container h1 {
+    margin-bottom: 5px;
+    font-size:40px;
+    font-family: 'Abel'; 
+}
+input[type=text], select {
+    width: 100%;
+    padding: 10px 5px;
+    border: none;
+    font-size:40px;
+    font-family: 'Abel'; 
+}
+.title::placeholder { 
+    color: #B8B8B8;
+    opacity: 1; 
+    font-size:40px;
+    font-family: 'Abel';   
+}
+.content {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width:100%;   
+    padding: 10px 5px;
+    font-size:20px;  
+    font-family: 'Abel';  
+}
+.file {
+    padding: 5px;
+    background: #ffa100; 
+    display: table;
+    color: #fff;
+    font-size: 16px;
+    opacity: 0.6;
+    transition: 0.3s;
+    cursor: pointer;
+    margin: 10px 0px;
+}
+.file:hover {
+    opacity: 1
+}
+.submit {
+    padding: 5px;
+    background: #007bff;
+    display: table;
+    color: #fff;
+    font-size: 16px;
+    opacity: 0.6;
+    transition: 0.3s;
+    cursor: pointer;
+    margin: 10px 0px;
+    border: none;
+}
+.submit:hover {
+    opacity: 1
+}
+input[type="file"] {
+    display: none;
+}
+
+/* Styles for records */
+.records-column {  
+    display: flex;
+    flex-direction: column;
+}
+.col-100 {
+    flex: 100%
+}
+.entry-item {
+    margin: 10px;
+    background-color: #fdf9f9c7;
+    padding: 10px;
+    font-size: 15px;
+}
+.entry-item h3, a, p {
+    color: #111;
+    text-decoration: none;
+}
+.right {
+    text-align: right;
+}
+.btn {
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    opacity: 0.6;
+    transition: 0.3s;
+    font-size: 16px;
+    margin: 10px 0px;
+    cursor: pointer;
+}
+.btn:hover {
+    opacity: 1;
+}
+.row-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+.title {
+    display: flex;
+    justify-content: flex-start; 
+}
+.title h1{
+    border-bottom: 2px solid #007bff;
+    padding: 5px;
+}
+.updates {
+    width: 95%;
+}
+.card-item {
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+footer {
+    display: flex;
+    height: 70px;
+    color: #111;
+    padding: 0 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    margin-top: 55px;
+}
