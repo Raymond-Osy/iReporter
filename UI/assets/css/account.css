@@ -22,7 +22,6 @@ body {
     font-size: 20px;
     color: #818181;
     display: block;
-    /* border: none; */
     background: none;
     width: 100%;
     text-align: left;
@@ -318,4 +317,10 @@ footer {
     align-items: center;
     font-size: 13px;
     margin-top: 55px;
+    margin-bottom: 0px;
+    bottom: 0px;
 }
+
+@media (max-width: 510px){
+    
+  }
