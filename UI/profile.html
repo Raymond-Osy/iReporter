@@ -12,78 +12,85 @@
     </head>
     
     <body>
-        <div class="sidenav">
-            <div class ="img-center"><a href="index.html"><img src="assets/img/logo1 - Copy.png" ></a></div>
-            <div class ="img-center"> 
-                <img src="assets/img/ilogo3.png" class="img-round" >
-                <h3>Raymond</h3>
+        <div class="main-container">
+            <div class="sidenav">
+                <span class="close">X</span>
+                <div class="img-center"><a href="index.html"><img src="assets/img/logo1 - Copy.png" ></a></div>
+                <div class="img-center"> 
+                    <img src="assets/img/ilogo3.png" class="img-round" >
+                    <h3>Raymond</h3>
+                </div>
+
+                <a href="profile.html" class="active">Profile</a>
+                <a href="updates.html">Updates</a>
+                <button class="dropdown-btn bordeless">Report
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container bordeless">
+                    <a href="report-Red-Flag.html">Red-Flag</a>
+                    <a href="record-intervention.html">Intervention</a>
+                </div>
+                <button class="dropdown-btn bordeless">Report-Records 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container bordeless">
+                    <a href="record-Red-Flag.html">Red-Flag</a>
+                    <a href="record-intervention.html">Intervention</a>
+                </div> 
             </div>
 
-            <a href="profile.html" class="active">Profile</a>
-            <a href="updates.html">Updates</a>
-            <button class="dropdown-btn bordeless">Report
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-container bordeless">
-                <a href="report-Red-Flag.html">Red-Flag</a>
-                <a href="record-intervention.html">Intervention</a>
+            <div class="main">
+                <div class="hams">
+                    <a href="#">
+                        <img src="assets/img/toggle.png">
+                    </a>
+                </div>
+                <div class="row">
+                    <div class="col-90">
+                        <h3>Tuesday, 20th November 2018</h3>
+                    </div>
+                    <div class="col-10">
+                        <a href="index.html"><i class="fa fa-sign-out" style="font-size:30px"></i></a>
+                    </div>
+                </div>
+                
+                <div class="wrap">
+                    <div class="card success">
+                        <h2>31</h2>
+                        <h3>Total Interventions</h3>
+                    </div>
+                    <div class="card danger">
+                        <h2>80</h2>
+                        <h3>Total Red-Flags</h3>
+                    </div>
+                </div>
+                <!-- Table -->
+                <table id="report">
+                    <tr>
+                        <th class="main">Details</th>
+                        <th>Red-Flag</th>
+                        <th>Intervention</th>
+                    </tr>
+                    <tr>
+                        <td class="main success">Resolved</td>
+                        <td>52</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td class="main warning">Pending</td>
+                        <td>22</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td class="main danger">Rejected</td>
+                        <td>6</td>
+                        <td>4</td>
+                    </tr>    
+                </table>
+                <footer>
+                    <p>Copyright &copy; 2018, Raymond Akalonu.</p>
+                </footer>
             </div>
-            <button class="dropdown-btn bordeless">Report-Records 
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-container bordeless">
-                <a href="record-Red-Flag.html">Red-Flag</a>
-                <a href="record-intervention.html">Intervention</a>
-            </div> 
-
-        </div>
-
-        <div class="main">
-            <div class="row">
-                <div class="col-90">
-                    <h3>Tuesday, 20th November 2018</h3>
-                </div>
-                <div class="col-10">
-                    <a href="index.html"><i class="fa fa-sign-out" style="font-size:30px"></i></a>
-                </div>
-            </div>
-            
-            <div class="wrap">
-                <div class="card success">
-                    <h2>31</h2>
-                    <h3>Total Interventions</h3>
-                </div>
-                <div class="card danger">
-                    <h2>80</h2>
-                    <h3>Total Red-Flags</h3>
-                </div>
-            </div>
-            <!-- Table -->
-            <table id="report">
-                <tr>
-                    <th class="main">Details</th>
-                    <th>Red-Flag</th>
-                    <th>Intervention</th>
-                </tr>
-                <tr>
-                    <td class="main success">Resolved</td>
-                    <td>52</td>
-                    <td>17</td>
-                </tr>
-                <tr>
-                    <td class="main warning">Pending</td>
-                    <td>22</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td class="main danger">Rejected</td>
-                    <td>6</td>
-                    <td>4</td>
-                </tr>    
-            </table>
-            <footer>
-                <p>Copyright &copy; 2018, Raymond Akalonu.</p>
-            </footer>
         </div>
         <script src="assets/js/index.js"></script>
     </body>
