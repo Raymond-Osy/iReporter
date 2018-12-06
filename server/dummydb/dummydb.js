@@ -1,32 +1,29 @@
 const redFlags = [
   {
-    redFlagId: 1,
-    redFlagTitle: 'This is title one',
-    date: 'today',
+    id: 1,
+    createdOn: 'today',
+    createdBy: 1,
     type: 'Red-Flag',
-    userId: 1,
     location: 'location one goes here',
-    img: 'here is image one',
+    status: 'under investigation',
     comment: 'This is for comment one'
   },
   {
-    redFlagId: 2,
-    redFlagTitle: 'This is title two',
-    date: 'yesterday',
-    type: 'Red-Flag',
-    userId: 2,
+    id: 2,
+    createdOn: 'yesterday',
+    createdBy: 2,
+    type: 'Intervention',
     location: 'location two goes here',
-    img: 'here is image two',
+    status: 'resolved',
     comment: 'This is for comment two'
   },
   {
-    redFlagId: 3,
-    redFlagTitle: 'This is title three',
-    date: 'three days ago',
+    id: 3,
+    createdOn: 'three days ago',
+    createdBy: 3,
     type: 'Red-Flag',
-    userId: 3,
     location: 'location three goes here',
-    img: 'here is image three',
+    status: 'resolved',
     comment: 'This is for comment three'
   }
 ];
