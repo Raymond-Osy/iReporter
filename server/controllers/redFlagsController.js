@@ -32,7 +32,7 @@ class RedFlagsController {
     */
   static getARedFlagById(req, res) {
     const { id } = req.params;
-    const redFlag = redFlags.find(r => r.id === parseInt(req.params.id));
+    const redFlag = redFlags.find(event => event.id === parseInt(req.params.id));
     if (!redFlag) {
       return res.status(404).json({
         error: 404,
@@ -81,7 +81,7 @@ class RedFlagsController {
    */
   static deleteRedFlag(req, res) {
     const { id } = req.params;
-    const redFlag = redFlags.find(r => r.id === parseInt(req.params.id));
+    const redFlag = redFlags.find(event => event.id === parseInt(req.params.id));
     if (!redFlag) {
       return res.status(404).json({
         status: 404,
@@ -106,7 +106,7 @@ class RedFlagsController {
     * @memberOf redFlagsController
     */
   static updateRedFlagLocation(req, res) {
-    const redFlag = redFlags.find(r => r.id === parseInt(req.params.id));
+    const redFlag = redFlags.find(event => event.id === parseInt(req.params.id));
     if (!redFlag) {
       return res.status(404).json({ status: 404, message: 'Red-flag with the given location was not found' });
     }
@@ -130,7 +130,7 @@ class RedFlagsController {
     * @memberOf BusinessController
     */
   static updateRedFlagComment(req, res) {
-    const redFlag = redFlags.find(r => r.id === parseInt(req.params.id));
+    const redFlag = redFlags.find(event => event.id === parseInt(req.params.id));
     if (!redFlag) {
       return res.status(404).json({ status: 404, error: 'Red-flag with the given comment was not found' });
     }
