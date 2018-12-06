@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="assets/css/account.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="shortcut icon" href="assets/img/ilogo.png">
-        <title>iReporter| Updates</title>
+        <title>iReporter| Profile</title>
     </head>
     
     <body>
@@ -22,14 +22,14 @@
                     <img src="assets/img/ilogo3.png" class="img-round" >
                     <h3>Raymond</h3>
                 </div>
-                <a href="profile.html">Profile</a>
-                <a href="updates.html"  class="active">Updates</a>
+                <a href="profile.html" class="active">Profile</a>
+                <a href="updates.html">Updates</a>
                 <button class="dropdown-btn bordeless">Report
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-container bordeless">
                     <a href="report-Red-Flag.html">Red-Flag</a>
-                    <a href="report-intervention.html">Intervention</a>
+                    <a href="record-intervention.html">Intervention</a>
                 </div>
                 <button class="dropdown-btn bordeless">Report-Records 
                     <i class="fa fa-caret-down"></i>
@@ -39,7 +39,7 @@
                     <a href="record-intervention.html">Intervention</a>
                 </div> 
             </div>
-        
+
             <div class="main">
                 <div class="row">
                     <div class="col-90">
@@ -58,45 +58,40 @@
                         <a href="index.html"><i class="fa fa-sign-out" style="font-size:30px"></i></a>
                     </div>
                 </div>
-
-                <div class="row">
-                    <div class="container updates">
-                        <div class="title">
-                            <h2>Today's Update</h2>
-                        </div>
-                        <div class="row-wrap card-item">
-                            <div class="card">
-                                <h3>Crises as petrol increases</h3><hr>
-                                <p>Context about incident definietly goes here...</p>
-                                <button class="btn bg-cool">Read more</button>
-                            </div>
-                            <div class="card">
-                                <h3>Crises as petrol increases</h3><hr>
-                                <p>Context about incident definietly goes here...</p>
-                                <button class="btn bg-cool">Read more</button>
-                            </div>
-                        </div>
-                        
-                        <!-- Second section -->
-                        <div class="title">
-                            <h2>Trending</h2>
-                        </div>
-                        <div class="row-wrap card-item">
-                            <div class="card">
-                                <h3>Flooding strikes Lagos</h3><hr>
-                                <p>Context about incident definietly goes here...</p>
-                                <button class="btn bg-cool">Read more</button>
-                            </div>
-                            <div class="card">
-                                <h3>Flooding strikes Lagos</h3><hr>
-                                <p>Context about incident definietly goes here...</p>
-                                <button class="btn bg-cool">Read more</button>
-                            </div>
-                        </div>
-                        <div class="row"></div>
-                        <div class="row-wrap"></div>
+                
+                <div class="wrap">
+                    <div class="card success">
+                        <h2>31</h2>
+                        <h3>Total Interventions</h3>
+                    </div>
+                    <div class="card danger">
+                        <h2>80</h2>
+                        <h3>Total Red-Flags</h3>
                     </div>
                 </div>
+                <!-- Table -->
+                <table id="report">
+                    <tr>
+                        <th class="main">Details</th>
+                        <th>Red-Flag</th>
+                        <th>Intervention</th>
+                    </tr>
+                    <tr>
+                        <td class="main success">Resolved</td>
+                        <td>52</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td class="main warning">Pending</td>
+                        <td>22</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td class="main danger">Rejected</td>
+                        <td>6</td>
+                        <td>4</td>
+                    </tr>    
+                </table>
                 <footer>
                     <p>Copyright &copy; 2018, Raymond Akalonu.</p>
                 </footer>
