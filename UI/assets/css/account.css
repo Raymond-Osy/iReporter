@@ -3,16 +3,12 @@
 body {
     font-family: "Nunito", sans-serif;
     background-color: #EBEFF2;
+    margin: 0;
 }
 .sidenav {
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
+    height: 100vh;
+    width: 25%;
     background-color: #111;
-    overflow-x: hidden;
     padding-top: 20px;
 }
 /* Style the sidenav links and the dropdown button */
@@ -22,7 +18,6 @@ body {
     font-size: 20px;
     color: #818181;
     display: block;
-    /* border: none; */
     background: none;
     width: 100%;
     text-align: left;
@@ -33,15 +28,23 @@ body {
 .sidenav a:hover, .dropdown-btn:hover {
     color: #f1f1f1;
 }
+.hams {
+    display: none;
+}
 .bordeless {
     border: none;
+}
+.main-container {
+    display: flex;
+    flex-direction: row;
 }
 
 /* Main content */
 .main {
-    margin-left: 250px; /* Same as the width of the sidenav */
+    /* margin-left: 250px; Same as the width of the sidenav */
     font-size: 20px; /* Increased text to enable scrolling */
-    padding: 0px 10px;
+    padding: 0px 50px;
+    width: 80%;
 }
 .row {
     display: flex;
@@ -51,6 +54,9 @@ body {
     border-left: 3px solid #007bff;;
     color: white;
     background-color: #050505;
+}
+.logo {
+    color: #fff; 
 }
 /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
 .dropdown-container {
@@ -77,6 +83,12 @@ body {
 }
 .col-90 {
     flex: 90%;
+}
+.col-30 {
+    flex: 30%;
+}
+.col-70 {
+    flex: 70%;
 }
 .col-10 {
     flex: 10%;
@@ -295,7 +307,7 @@ input[type="file"] {
     display: flex;
     justify-content: flex-start; 
 }
-.title h1{
+.title h2{
     border-bottom: 2px solid #007bff;
     padding: 5px;
 }
@@ -318,4 +330,43 @@ footer {
     align-items: center;
     font-size: 13px;
     margin-top: 55px;
+    margin-bottom: 0px;
+    bottom: 0px;
+}
+
+@media (max-width: 510px) {
+    .main-container {
+        display: block;
+        height: 100%;
+    }
+    .sidenav {
+        height: 150vh;
+        top: 0%;
+        left: 0%;
+        position: absolute;
+        display: none;
+        width: 100%;
+    }
+    .main {
+        width: 100%;
+        padding: 5px;
+    }
+    .close {
+        font-size: 15px;
+        font-weight: bold;
+        height: 10px;
+        width: 10px;
+        color: #fff;
+        position: relative;
+        left: 92%;
+        cursor: pointer;
+    }
+    .hams {
+        padding-top: 20px;
+        display: inline;
+        cursor: pointer;
+    }
+    .submit {
+        display: inline;
+    }
 }

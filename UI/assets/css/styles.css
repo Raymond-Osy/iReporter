@@ -17,19 +17,6 @@ body {
     background-attachment: fixed;
     justify-content: space-between;
 } 
-.btn-about {
-    background-color: #007bff;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 16px;
-    cursor: pointer;
-    opacity: 1;
-} 
 .row{
     display: -webkit-box;
     display: -ms-flexbox;
@@ -257,3 +244,26 @@ input[type=email], input[type=password], input[type=text] {
 .center {
     justify-content: center;
 }
+
+@media (max-width: 820px){
+    body {
+        font-size: 15px;
+    }
+    .logo {
+        width: 100%;
+        height: auto;
+        margin: 10px;
+    } 
+    .btn-main {
+        font-size: 18px;
+        padding: 15px;
+        width: 50%;
+    }
+    .m-side {
+        margin-right: 1px;
+        margin-left: 1px;
+    }
+    .footer-item-container {
+        flex-direction: column;
+    }
+  }
