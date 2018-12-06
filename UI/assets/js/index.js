@@ -14,3 +14,12 @@ for (var i = 0; i < dropdown.length; i++) {
   });
 }
 
+function handleOpen() {
+  var sideNav = document.getElementById('sideNav');
+  sideNav.style.display = 'block';
+}
+
+function handleClose() {
+  var sideNav = document.getElementById('sideNav');
+  sideNav.style.display = 'none';
+}

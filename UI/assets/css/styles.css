@@ -245,7 +245,7 @@ input[type=email], input[type=password], input[type=text] {
     justify-content: center;
 }
 
-@media (max-width: 510px){
+@media (max-width: 820px){
     body {
         font-size: 15px;
     }
@@ -266,5 +266,4 @@ input[type=email], input[type=password], input[type=text] {
     .footer-item-container {
         flex-direction: column;
     }
-    
   }

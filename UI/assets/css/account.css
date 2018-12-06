@@ -3,16 +3,12 @@
 body {
     font-family: "Nunito", sans-serif;
     background-color: #EBEFF2;
+    margin: 0;
 }
 .sidenav {
     height: 100vh;
-    width: 20%;
-    /* position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0; */
+    width: 25%;
     background-color: #111;
-    /* overflow-x: hidden; */
     padding-top: 20px;
 }
 /* Style the sidenav links and the dropdown button */
@@ -31,6 +27,9 @@ body {
 /* On mouse-over */
 .sidenav a:hover, .dropdown-btn:hover {
     color: #f1f1f1;
+}
+.hams {
+    display: none;
 }
 .bordeless {
     border: none;
@@ -55,6 +54,9 @@ body {
     border-left: 3px solid #007bff;;
     color: white;
     background-color: #050505;
+}
+.logo {
+    color: #fff; 
 }
 /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
 .dropdown-container {
@@ -81,6 +83,12 @@ body {
 }
 .col-90 {
     flex: 90%;
+}
+.col-30 {
+    flex: 30%;
+}
+.col-70 {
+    flex: 70%;
 }
 .col-10 {
     flex: 10%;
@@ -299,7 +307,7 @@ input[type="file"] {
     display: flex;
     justify-content: flex-start; 
 }
-.title h1{
+.title h2{
     border-bottom: 2px solid #007bff;
     padding: 5px;
 }
@@ -329,8 +337,10 @@ footer {
 @media (max-width: 510px) {
     .main-container {
         display: block;
+        height: 100%;
     }
     .sidenav {
+        height: 150vh;
         top: 0%;
         left: 0%;
         position: absolute;
@@ -352,19 +362,11 @@ footer {
         cursor: pointer;
     }
     .hams {
-        display: inline-block;
-        font-weight: bold;
-        position: relative;
+        padding-top: 20px;
+        display: inline;
         cursor: pointer;
-        width: 20px;
-        height: 20px;
-        border: 1px solid #000;
     }
-    .hams>span {
-        display: block;
-        font-size: 15px;
-        height: 6px;
-        width: 20px;
-        color: #fff;
+    .submit {
+        display: inline;
     }
 }
