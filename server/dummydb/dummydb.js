@@ -1,30 +1,30 @@
 const redFlags = [
   {
     id: 1,
-    createdOn: 'today',
+    createdOn: new Date(),
     createdBy: 1,
     type: 'Red-Flag',
-    location: 'location one goes here',
+    location: '6.1144° N, 4.3899° E',
     status: 'under investigation',
-    comment: 'This is for comment one'
+    comment: 'Police extorts money from motorist'
   },
   {
     id: 2,
-    createdOn: 'yesterday',
+    createdOn: new Date(),
     createdBy: 2,
     type: 'Intervention',
-    location: 'location two goes here',
+    location: '2.1748° N, 4.3657° E',
     status: 'resolved',
-    comment: 'This is for comment two'
+    comment: 'Bad road in streets'
   },
   {
     id: 3,
-    createdOn: 'three days ago',
+    createdOn: new Date(),
     createdBy: 3,
     type: 'Red-Flag',
-    location: 'location three goes here',
+    location: '3.1744° N, 7.3899° E',
     status: 'resolved',
-    comment: 'This is for comment three'
+    comment: 'Stolen balot boxes'
   }
 ];
 
