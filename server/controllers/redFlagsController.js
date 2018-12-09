@@ -11,7 +11,7 @@ app.use(express.json());
 class RedFlagsController {
 /**
   * @static
-  * @param {object} req - The request payload recieved from the router.........Done
+  * @param {object} req - The request payload recieved from the router
   * @param {object} res - The response payload sent back from the controller
   * @returns {object} - List of all redFlags
   * @memberOf redFlagsController
@@ -60,7 +60,7 @@ class RedFlagsController {
       id: redFlags.length === 0 ? 1 : redFlags.length + 1,
       createdOn: new Date().toString(),
       createdBy: redFlags.length + 1,
-      type: req.body.type,
+      type: 'Red-Flag',
       location: req.body.location,
       status: 'resolved',
       comment: req.body.comment

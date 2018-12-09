@@ -1,6 +1,6 @@
 import express from 'express';
 import RedFlagsController from '../controllers/redFlagsController';
-import incidentValidator from '../middleware/validator';
+import RedFlagValidator from '../middleware/redFlagValidator';
 
 const {
   getAllRedFlags,
@@ -14,9 +14,9 @@ const {
 const router = express.Router();
 router.get('/redFlags', getAllRedFlags);
 router.get('/redFlags/:id', getARedFlagById);
-router.post('/redFlags', incidentValidator.creatRedflagValidator, createRedFlag);
+router.post('/redFlags', RedFlagValidator.createRedflagValidator, createRedFlag);
 router.delete('/redFlags/:id', deleteRedFlag);
-router.patch('/redFlags/:id/location', incidentValidator.redFlagLocationValidator, updateRedFlagLocation);
-router.patch('/redFlags/:id/comment', incidentValidator.redFlagCommentValidator, updateRedFlagComment);
+router.patch('/redFlags/:id/location', RedFlagValidator.redFlagLocationValidator, updateRedFlagLocation);
+router.patch('/redFlags/:id/comment', RedFlagValidator.redFlagCommentValidator, updateRedFlagComment);
 
 export default router;

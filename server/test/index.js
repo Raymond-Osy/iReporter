@@ -82,7 +82,7 @@ describe('Update a location in a specified Red-flag', () => {
     chai.request(app)
       .patch('/api/v1/redFlags/1/location')
       .end((err, res) => {
-        expect(res).to.have.status(200);
+        expect(res).to.have.status(400);
         expect(res.body).to.be.an('object');
         done();
       });
@@ -94,7 +94,7 @@ describe('Update a comment in a specified Red-flag', () => {
     chai.request(app)
       .patch('/api/v1/redFlags/1/comment')
       .end((err, res) => {
-        expect(res).to.have.status(200);
+        expect(res).to.have.status(400);
         expect(res.body).to.be.an('object');
         done();
       });
