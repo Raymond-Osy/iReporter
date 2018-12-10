@@ -16,40 +16,40 @@ class RedFlagValidator {
    */
   static createRedflagValidator(req, res, next) {
     const { comment, location } = req.body;
-    if ((!location && !comment) || (location.trim() === '' && comment.trim() === '')) {
+    if (!location) {
       return res.status(400).send({
         status: 400,
-        error: 'comments and location must be present must contain a valid string'
+        error: 'location must be present'
       });
     }
-    if (typeof (location) !== 'string' && typeof (comment) !== 'string') {
+    if (!comment) {
       return res.status(400).send({
         status: 400,
-        error: 'comments and location must contain a string'
-      });
-    }
-    if (typeof (comment) !== 'string') {
-      return res.status(400).send({
-        status: 400,
-        error: 'comments must be a string',
-      });
-    }
-    if (!comment || comment.trim() === '') {
-      return res.status(400).send({
-        status: 404,
-        error: 'comments not found in the request body',
+        error: 'comments must be present'
       });
     }
     if (typeof (location) !== 'string') {
       return res.status(400).send({
         status: 400,
-        error: 'location must contain a string',
+        error: 'location must contain a string'
       });
     }
-    if (!location || location.trim() === '') {
+    if (typeof (comment) !== 'string') {
       return res.status(400).send({
         status: 400,
-        error: 'location not found in the request body',
+        error: 'comments must contain a string'
+      });
+    }
+    if (location.trim() === '') {
+      return res.status(400).send({
+        status: 400,
+        error: 'Location must contain a valid string'
+      });
+    }
+    if (comment.trim() === '') {
+      return res.status(400).send({
+        status: 400,
+        error: 'comments must contain a valid string'
       });
     }
     next();
