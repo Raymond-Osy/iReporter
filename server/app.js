@@ -1,7 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import logger from 'morgan';
-import router from './routes/routes';
+import router from './routes';
 
 
 const app = express();
@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({
 app.use('/api/v1', router);
 
 app.all('*', (req, res) => {
-  res.status(404).send('Hello world!');
+  res.status(404).send('The page you are looking for was not found');
 });
 
 const port = parseInt(process.env.PORT, 10) || 8000;
