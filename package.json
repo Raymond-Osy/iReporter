@@ -6,6 +6,7 @@
   "scripts": {
     "build": "babel server -d dist/server",
     "start": "babel-node server/app.js",
+    "create-tables": "babel-node server/db/index.js",
     "start:dev": "nodemon --exec babel-node server/app.js",
     "test": "nyc --reporter=html --reporter=text mocha server/test/*.js --exit  --require babel-register",
     "coveralls": "nyc --reporter=lcov --reporter=text-lcov npm test",
@@ -28,10 +29,13 @@
     "body-parser": "^1.18.3",
     "chai": "^4.1.2",
     "chai-http": "^4.2.0",
+    "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "mocha": "^5.2.0",
     "morgan": "^1.9.1",
-    "nodemon": "^1.18.7"
+    "nodemon": "^1.18.7",
+    "pg": "^7.7.1",
+    "pg-promise": "^8.5.3"
   },
   "devDependencies": {
     "coveralls": "^3.0.2",
