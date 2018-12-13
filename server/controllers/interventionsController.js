@@ -28,5 +28,17 @@ class InterventionsController {
         return res.status(201).json({ status: 201, data: [{ intervention }] });
       });
   }
+
+  static getAllInterventions(req, res) {
+    db.query(queries.getAllInterventions,
+      ['intervention'],
+      (err, dbRes) => {
+        if (err) {
+          return res.status(400).json({ status: 400, error: err });
+        }
+        const { rows } = dbRes;
+        return res.status(200).json({ status: 200, data: rows[0] });
+      });
+  }
 }
 export default InterventionsController;

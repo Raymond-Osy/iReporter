@@ -20,6 +20,7 @@ const router = express.Router();
 router.post('/auth/signup', UserValidator.signupValidator, UsersController.signup);
 router.post('/auth/login', UserValidator.loginValidator, UsersController.login);
 router.post('/interventions', InterventionValidator.createInterventionValidator, Authenticator.checkToken, InterventionsController.createIntervention);
+router.get('/interventions', Authenticator.checkToken, InterventionsController.getAllInterventions);
 router.get('/redFlags', getAllRedFlags);
 router.get('/redFlags/:id', getARedFlagById);
 router.post('/redFlags', RedFlagValidator.createRedflagValidator, createRedFlag);
