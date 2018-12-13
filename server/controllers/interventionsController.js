@@ -40,5 +40,21 @@ class InterventionsController {
         return res.status(200).json({ status: 200, data: rows[0] });
       });
   }
+
+  static getInterventionById(req, res) {
+    db.query(queries.getInterventionById,
+      ['intervention', req.params.id],
+      (err, dbRes) => {
+        if (err) {
+          return res.status(400).json({ status: 400, error: err });
+        }
+        const { rows, rowCount } = dbRes;
+        console.log(rows[0], 'efedgrgergfgref');
+        if (rowCount === 0) {
+          return res.status(404).json({ status: 404, error: 'Intervention not found' });
+        }
+        return res.status(200).json({ status: 200, data: rows[0] });
+      });
+  }
 }
 export default InterventionsController;
