@@ -36,7 +36,7 @@ class RedFlagsController {
   static getARedFlagById(req, res) {
     const { id } = req.params;
     const redFlag = redFlags.find(event => event.id === parseInt(req.params.id));
-    if (!redFlag) { 
+    if (!redFlag) {
       return res.status(404).json({
         status: 404,
         error: `Red-flag with the given Id ${id} does not exist`
