@@ -20,6 +20,39 @@ class InterventionValidator {
     }
     next();
   }
+
+  static updateLocationValidator(req, res, next) {
+    const { location } = req.body;
+    if (!location) {
+      return res.status(400).send({
+        status: 400,
+        error: 'Location must be present'
+      });
+    }
+    next();
+  }
+
+  static updateCommentValidator(req, res, next) {
+    const { comment } = req.body;
+    if (!comment) {
+      return res.status(400).send({
+        status: 400,
+        error: 'comment must be present'
+      });
+    }
+    next();
+  }
+
+  static updateStatusValidator(req, res, next) {
+    const { status } = req.body;
+    if (!status) {
+      return res.status(400).send({
+        status: 400,
+        error: 'Status must be present'
+      });
+    }
+    next();
+  }
 }
 
 export default InterventionValidator;
