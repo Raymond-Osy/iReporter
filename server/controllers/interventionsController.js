@@ -37,7 +37,7 @@ class InterventionsController {
           return res.status(400).json({ status: 400, error: err });
         }
         const { rows } = dbRes;
-        return res.status(200).json({ status: 200, data: rows[0] });
+        return res.status(200).json({ status: 200, data: rows });
       });
   }
 
@@ -54,6 +54,25 @@ class InterventionsController {
           return res.status(404).json({ status: 404, error: 'Intervention not found' });
         }
         return res.status(200).json({ status: 200, data: rows[0] });
+      });
+  }
+
+  static updateLocation(req, res) {
+    const { location } = req.body;
+    const { id } = req.user;
+    db.query(queries.updateLocation,
+      [location, req.params.id, id],
+      (err, dbRes) => {
+        if (err) {
+          return res.status(400).json({ status: 400, error: err });
+        }
+        if (dbRes.rowCount === 1) {
+          return res.status(200).json({
+            status: 200,
+            data: [{ id: req.params.id, message: 'updated intervention location' }]
+          });
+        }
+        return res.status(404).json({ status: 404, data: [{ id: req.params.id, message: 'could not update' }] });
       });
   }
 }

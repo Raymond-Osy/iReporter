@@ -20,6 +20,17 @@ class InterventionValidator {
     }
     next();
   }
+
+  static updateLocationValidator(req, res, next) {
+    const { location } = req.body;
+    if (!location) {
+      return res.status(400).send({
+        status: 400,
+        error: 'Location must be present'
+      });
+    }
+    next();
+  }
 }
 
 export default InterventionValidator;

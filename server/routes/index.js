@@ -22,6 +22,7 @@ router.post('/auth/login', UserValidator.loginValidator, UsersController.login);
 router.post('/interventions', InterventionValidator.createInterventionValidator, Authenticator.checkToken, InterventionsController.createIntervention);
 router.get('/interventions', Authenticator.checkToken, InterventionsController.getAllInterventions);
 router.get('/interventions/:id', Authenticator.checkToken, InterventionsController.getInterventionById);
+router.patch('/interventions/:id/location', InterventionValidator.updateLocationValidator, Authenticator.checkToken, InterventionsController.updateLocation);
 router.get('/redFlags', getAllRedFlags);
 router.get('/redFlags/:id', getARedFlagById);
 router.post('/redFlags', RedFlagValidator.createRedflagValidator, createRedFlag);
