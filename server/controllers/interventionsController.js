@@ -113,5 +113,22 @@ class InterventionsController {
         return res.status(404).json({ status: 404, data: [{ id: req.params.id, message: 'could not update' }] });
       });
   }
+
+  static delete(req, res) {
+    db.query(queries.deleteIncident,
+      [req.params.id],
+      (err, dbRes) => {
+        if (err) {
+          return res.status(404).json({ status: 404, data: [{ id: req.params.id, message: 'could not delete' }] });
+        }
+        if (dbRes.rowCount === 1) {
+          return res.status(200).json({
+            status: 200,
+            data: [{ id: req.params.id, message: 'deleted intervention' }]
+          });
+        }
+        return res.status(404).json({ status: 404, data: [{ id: req.params.id, message: 'could not delete' }] });
+      });
+  }
 }
 export default InterventionsController;
