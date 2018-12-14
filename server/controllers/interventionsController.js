@@ -72,7 +72,26 @@ class InterventionsController {
             data: [{ id: req.params.id, message: 'updated intervention location' }]
           });
         }
-        return res.status(404).json({ status: 404, data: [{ id: req.params.id, message: 'could not update' }] });
+        return res.status(404).json({ status: 404, data: [{ id: req.params.id, message: 'could not update location' }] });
+      });
+  }
+
+  static updateComment(req, res) {
+    const { comment } = req.body;
+    const { id } = req.user;
+    db.query(queries.updateComment,
+      [comment, req.params.id, id],
+      (err, dbRes) => {
+        if (err) {
+          return res.status(400).json({ status: 400, error: err });
+        }
+        if (dbRes.rowCount === 1) {
+          return res.status(200).json({
+            status: 200,
+            data: [{ id: req.params.id, message: 'updated intervention comment' }]
+          });
+        }
+        return res.status(404).json({ status: 404, data: [{ id: req.params.id, message: 'could not update comment' }] });
       });
   }
 }

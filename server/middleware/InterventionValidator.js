@@ -31,6 +31,17 @@ class InterventionValidator {
     }
     next();
   }
+
+  static updateCommentValidator(req, res, next) {
+    const { comment } = req.body;
+    if (!comment) {
+      return res.status(400).send({
+        status: 400,
+        error: 'comment must be present'
+      });
+    }
+    next();
+  }
 }
 
 export default InterventionValidator;
