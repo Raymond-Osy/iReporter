@@ -24,6 +24,7 @@ router.get('/interventions', Authenticator.checkToken, InterventionsController.g
 router.get('/interventions/:id', Authenticator.checkToken, InterventionsController.getInterventionById);
 router.patch('/interventions/:id/location', InterventionValidator.updateLocationValidator, Authenticator.checkToken, InterventionsController.updateLocation);
 router.patch('/interventions/:id/comment', InterventionValidator.updateCommentValidator, Authenticator.checkToken, InterventionsController.updateComment);
+router.patch('/interventions/:id/status', InterventionValidator.updateStatusValidator, Authenticator.checkToken, InterventionsController.updateStatus);
 router.get('/redFlags', getAllRedFlags);
 router.get('/redFlags/:id', getARedFlagById);
 router.post('/redFlags', RedFlagValidator.createRedflagValidator, createRedFlag);

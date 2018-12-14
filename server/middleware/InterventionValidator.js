@@ -42,6 +42,17 @@ class InterventionValidator {
     }
     next();
   }
+
+  static updateStatusValidator(req, res, next) {
+    const { status } = req.body;
+    if (!status) {
+      return res.status(400).send({
+        status: 400,
+        error: 'Status must be present'
+      });
+    }
+    next();
+  }
 }
 
 export default InterventionValidator;

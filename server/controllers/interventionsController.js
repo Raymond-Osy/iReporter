@@ -94,5 +94,24 @@ class InterventionsController {
         return res.status(404).json({ status: 404, data: [{ id: req.params.id, message: 'could not update comment' }] });
       });
   }
+
+  // Route for an Admin to change status
+  static updateStatus(req, res) {
+    const { status } = req.body;
+    db.query(queries.updateStatus,
+      [status, req.params.id],
+      (err, dbRes) => {
+        if (err) {
+          return res.status(400).json({ status: 400, error: err });
+        }
+        if (dbRes.rowCount === 1) {
+          return res.status(200).json({
+            status: 200,
+            data: [{ id: req.params.id, message: 'updated intervention status' }]
+          });
+        }
+        return res.status(404).json({ status: 404, data: [{ id: req.params.id, message: 'could not update' }] });
+      });
+  }
 }
 export default InterventionsController;
