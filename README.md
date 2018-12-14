@@ -51,7 +51,7 @@ npm install
 ```
 4. Start the application
 ```
-npm run start:dev
+npm run dev
 ```
 5. Install postman to test all endpoints
 
@@ -66,6 +66,15 @@ npm run start:dev
 <tr> <td>POST</td> <td>/redFlags </td><td>Create a new Red-Flag</td></tr>
 <tr> <td>PUT</td><td>/redFlags/(redFlagId)  </td><td>Update a Red-Flag with the given ID</td></tr>
 <tr><td>DELETE</td><td>/redFlags/(redFlagId)</td><td>  Delete Red-Flag with the given ID </td></tr>
+<tr> <td>POST</td> <td>/auth/signup </td><td>user creates an account</td></tr>
+<tr> <td>POST</td> <td>/auth/login </td><td>user logs in to account</td></tr>
+<tr> <td>POST</td> <td>/interventions </td><td>Create a new Intervention</td></tr>
+<tr> <td>GET</td> <td> /interventions </td> <td>Get all Intervention</td></tr>
+<tr> <td>GET</td> <td> /interventions/:id </td> <td>Get a specific intervention</td></tr>
+<tr><td>PATCH</td><td>/interventions/:id/location</td><td>  Updates a location in a given intervention </td></tr>
+<tr><td>PATCH</td><td>/interventions/:id/comment</td><td>  Updates a comment in a given intervention </td></tr>
+<tr><td>PATCH</td><td>/interventions/:id/status'</td><td>  Admin Updates a status in a given intervention </td></tr>
+<tr><td>DELETE</td><td>/intervention/:id</td><td>  Delete Intervention with the given ID </td></tr>
 </table>
 
 <i>Project still in progress...</i>
